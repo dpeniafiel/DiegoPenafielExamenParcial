@@ -10,7 +10,7 @@ namespace DiegoPenafiel
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Registro("dp"));
+            MainPage = new NavigationPage(new Login());
         }
 
         protected override void OnStart()
