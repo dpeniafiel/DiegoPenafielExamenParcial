@@ -16,6 +16,7 @@ namespace DiegoPenafiel
         String Usuario { get; set; }
 
         String Estudiante { get; set; }
+
         double totalFinalCalculado { get; set; }
 
         public Resumen(String usuario, double totalFinalCalculado, string estudiante)
