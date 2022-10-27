@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiegoPenafiel.Resumen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="DodgerBlue" >
+                <Grid HeightRequest="80">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label TextColor="white" FontSize="32" Text="Resumen de cuotas" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="0" ></Label>
+                    <Label Text="..." x:Name="usuarioLogeado" TextColor="Black" Grid.Column="2" Grid.Row="0" 
+                           FontAttributes="Bold" FontSize="16"
+                           />
+                    <Button Text="Salir" Grid.Column="2" Grid.Row="1" BackgroundColor="red" TextColor="white"
+                            x:Name="btnSalir" Clicked="btnSalir_Clicked"></Button>
+                </Grid>
+            </Frame>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Text="Estudiante:" TextColor="DodgerBlue" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
+                <Label x:Name="lblEstudiante" TextColor="DeepPink" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"/>
+
+                <Label Text="Valor final a pagar:" TextColor="DodgerBlue" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"/>
+                <Label x:Name="lblTotalFinal" TextColor="DeepPink" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"/>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

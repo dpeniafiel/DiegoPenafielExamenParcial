@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiegoPenafiel.Login">
+    <ContentPage.Content>
+        <ScrollView IsVisible="true">
+            <StackLayout VerticalOptions="Center">
+                <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+                    <StackLayout>
+                        <Label Text="App cálculo de cuotas" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                        <Label Text="Ingreso al Sistema" HorizontalTextAlignment="Center" TextColor="White" FontSize="24"/>
+                    </StackLayout>
+                </Frame>
+                <StackLayout>
+                    <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"
+                        WidthRequest="100" HeightRequest="100"/>
+                        <Entry x:Name="txtUsuario" Placeholder="ingrese aquí su usuario"/>
+                        <Entry x:Name="txtContrasena" Placeholder="ingresa aquí su contraseña" IsPassword="True"/>
+                        <Label/>
+                        <Button x:Name="btnIngresar" Text="Ingresar" Clicked="btnIngresar_Clicked" TextColor="white" BackgroundColor="DeepPink" />
+                    </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

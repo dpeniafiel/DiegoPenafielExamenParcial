@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiegoPenafiel.Registro">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="DodgerBlue" >
+                <Grid HeightRequest="80">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label TextColor="white" FontSize="32" Text="Registro de cuotas" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="0" ></Label>
+                    <Label Text="..." x:Name="usuarioLogeado" TextColor="Black" Grid.Column="2" Grid.Row="0" 
+                           FontAttributes="Bold" FontSize="16"
+                           />
+                    <Button Text="Salir" Grid.Column="2" Grid.Row="1" BackgroundColor="red" TextColor="white"
+                            x:Name="btnSalir" Clicked="btnSalir_Clicked"></Button>
+                </Grid>
+            </Frame>
+
+            <Frame OutlineColor="DodgerBlue" BackgroundColor="white" Margin="8" >
+                <StackLayout>
+                    <Grid Padding="8">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Nombre estudiante:" TextColor="DodgerBlue" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
+                        <Entry x:Name="txtNombreEstudiante" TextColor="DeepPink" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"/>
+
+                        <Label Text="Monto total curso:" TextColor="DodgerBlue" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"/>
+                        <Label Text="$ 3000" TextColor="DeepPink" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="1"/>
+
+                        <Label Text="Cuotas:" TextColor="DodgerBlue" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2"/>
+                        <Label Text="5" TextColor="DeepPink" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="1"/>
+
+
+                        <Label Text="Cuota Inicial:" TextColor="DodgerBlue" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"/>
+                        <Entry x:Name="cuotaInicial" Placeholder="Cuota inicial ($)" TextChanged="cuotaInicial_TextChanged"
+                                   Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="1"/>
+
+                        <Button x:Name="btnCalcularCuotaMensual" TextColor="white"  BackgroundColor="DodgerBlue" 
+                                Text="Calcular cuota inicial" Clicked="btnCalcularCuotaMensual_Clicked"
+                                    Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3"/>
+                        <Label Text="El valor de cada cuota es:" TextColor="DodgerBlue" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2"/>
+                        <Label x:Name="lblCuotaMensual" TextColor="DeepPink" FontSize="24" FontAttributes="Bold" 
+                                   Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="1"/>
+                        <Button x:Name="btnRegistrar" TextColor="white"  BackgroundColor="DeepPink" Text="Guardar" Clicked="btnRegistrar_Clicked"
+                                    Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
